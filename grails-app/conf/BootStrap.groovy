@@ -1,6 +1,11 @@
 import com.tekdays.*
 			class BootStrap {
-			def init = { servletContext ->
+				
+			
+			def init = {
+				
+					 servletContext ->
+					 if (!TekEvent.get(1)){
 			new TekUser(fullName: 'John Doe',
 			userName: 'jdoe',
 			password: 't0ps3cr3t',
@@ -76,6 +81,7 @@ import com.tekdays.*
 				).save()
 			
 			}
+				}
 			
 			
 			def destroy = {
